@@ -4,80 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexGen Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #002147, #003366, #004488);
+            color: white;
         }
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #1E1E2F;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            background: linear-gradient(to right, #002147, #003366);
+            border-bottom: 1px solid #F0A500;
         }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s;
+        .navbar-brand, .nav-link {
+            color: white !important;
         }
-        nav a:hover {
-            color: #F0A500;
+        .nav-link:hover {
+            color: #F0A500 !important;
         }
         section {
             padding: 100px 20px;
             text-align: center;
+            position: relative;
         }
-        .hero {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            font-weight: bold;
+        section::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 1px;
+            background-color: #F0A500;
+            margin: 40px auto 0 auto;
         }
-        .alt-bg {
-            background-color: #ffffff;
+        section:last-of-type::after {
+            display: none;
         }
-        .gray-bg {
-            background-color: #e0e0e0;
+        h2 {
+            color: #F0A500;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#hero">NexGen Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <section id="hero" class="hero">
-        Find Top Talent, Fast
+    
+    <section id="hero">
+        <h1>Find Top Talent, Fast</h1>
     </section>
-    <section id="about" class="alt-bg">
+    <section id="about">
         <h2>About Us</h2>
         <p>NexGen Solutions is dedicated to connecting top talent with industry-leading companies.</p>
     </section>
-    <section id="services" class="gray-bg">
+    <section id="services">
         <h2>Our Services</h2>
         <p>We provide executive search, temp staffing, and direct hire solutions tailored to your needs.</p>
     </section>
-    <section id="industries" class="alt-bg">
+    <section id="industries">
         <h2>Industries We Serve</h2>
         <p>We specialize in recruiting for tech, healthcare, and finance industries.</p>
     </section>
-    <section id="contact" class="gray-bg">
+    <section id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for hiring solutions or job opportunities.</p>
     </section>
